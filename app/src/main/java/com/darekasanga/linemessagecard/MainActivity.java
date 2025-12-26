@@ -161,8 +161,8 @@ public class MainActivity extends AppCompatActivity {
         float lineY = y;
 
         for (String word : words) {
-            String testLine = line + word + " ";
-            float testWidth = paint.measureText(testLine);
+            StringBuilder testLine = new StringBuilder(line).append(word).append(" ");
+            float testWidth = paint.measureText(testLine.toString());
 
             if (testWidth > maxWidth && line.length() > 0) {
                 canvas.drawText(line.toString().trim(), x, lineY, paint);
@@ -185,10 +185,10 @@ public class MainActivity extends AppCompatActivity {
             }
 
             File imageFile = new File(cacheDir, "message_card.png");
-            FileOutputStream fos = new FileOutputStream(imageFile);
-            bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
-            fos.flush();
-            fos.close();
+            try (FileOutputStream fos = new FileOutputStream(imageFile)) {
+                bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
+                fos.flush();
+            }
 
             return imageFile;
         } catch (IOException e) {
