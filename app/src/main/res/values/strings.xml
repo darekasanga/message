@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LINE Message Card</string>
+    <string name="app_title">LINE Message Card Creator</string>
+    <string name="app_description">Create beautiful message cards and share them with your friends via LINE without needing an official account or group!</string>
+    
+    <string name="message_label">Your Message</string>
+    <string name="message_hint">Enter your message here…</string>
+    
+    <string name="sender_label">Your Name (Optional)</string>
+    <string name="sender_hint">Your name</string>
+    
+    <string name="color_label">Card Color</string>
+    <string name="color_blue">Blue</string>
+    <string name="color_pink">Pink</string>
+    <string name="color_green">Green</string>
+    <string name="color_yellow">Yellow</string>
+    
+    <string name="preview_button">Preview Card</string>
+    <string name="preview_title">Your Message Card Preview</string>
+    <string name="preview_message">This is how your card will look!</string>
+    
+    <string name="send_to_line_button">Send to LINE</string>
+</resources>
